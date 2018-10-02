@@ -13,40 +13,46 @@
         
             <table>
                 <tr>
-                    <form action= '/error'></form>
+                    <form action= '/welcome' method='POST'>
                     <td><label for="username">Username</label></td>
 
                     <td>
-                        <input name="username" type="text" value="" >
+                        <input name="username" type="text" value=""></input>
+                        <p class= 'error'>{{username_error}}</p>
+                        
                 </td>
                 
                     <tr>
                         <td>
-                        <form action = '/passerror'></form>
                             <label for="password">Password</label></td>
                         <td>
-                            <input name="password" type="password" value="" required>
+                            <input name="password" type="password" value="" ></input>
+                            <p class= 'error'>{{password_error}}</p>
+                            
+
                         </td>
                     </tr>
                     <tr>
-                            <form action= '/passerror'></form>
+                            
                         <td><label for="verify">Verify Password</label></td>
                         <td>
-                            <input name="verify" type="password" value="" required>
+                            <input name="verify" type="password" value="" ></input>
+                            <p class= 'error'>{{password_missmatch}}</p>
+                            
+
                         </td>
                     </tr>
                     <tr>
-                        <form action = '/emailerror'></form>
                         <td><label for="email">Email (optional)</label></td>
                         <td>
-                            <input name="email" value="">
+                            <input name="email" value=""></input>
+                            <p class= 'error'>{{email_error}}</p>
+                        
+                            <input type="submit"></input>
+                         </form>
                         </td>
                     </tr>
-     
+                            
             </table>
-                <form action= "/main"></form>
-                <input type="submit">
-            </form>
-        </form>
     </body>
 </html>
